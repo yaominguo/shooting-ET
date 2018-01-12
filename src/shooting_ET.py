@@ -14,11 +14,12 @@ def run_game():
     pygame.display.set_caption("Shooting ET!")
 
     # 创建飞船
-    rocket = Rocket(screen)
+    rocket = Rocket(ai_settings, screen)
 
     # 开始游戏的主循环
     while True:
-        gf.check_events()
+        gf.check_events(rocket)
+        rocket.update()
         gf.update_screen(ai_settings, screen, rocket)
 
 
