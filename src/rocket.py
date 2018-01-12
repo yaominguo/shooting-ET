@@ -1,13 +1,14 @@
 # coding=utf-8
 import pygame
 
+
 class Rocket():
     def __init__(self, screen):
         """初始化飞船并设置初始位置"""
         self.screen = screen
 
         # 加载飞船并获取外形矩阵
-        self.image = pygame.image.load('./images/rocket.bmp')
+        self.image = pygame.image.load('images/rocket.bmp')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 
