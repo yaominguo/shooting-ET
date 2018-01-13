@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93e4e77c-77b0-420b-ad1e-4bb614b08696" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bullet.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/setting.py" afterPath="$PROJECT_DIR$/src/setting.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game_functions.py" afterPath="$PROJECT_DIR$/src/game_functions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/shooting_ET.py" afterPath="$PROJECT_DIR$/src/shooting_ET.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bullet.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bullet.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bullet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+            <state relative-caret-position="69">
+              <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding>
                 <element signature="e#15#28#0" expanded="true" />
               </folding>
@@ -43,8 +42,8 @@
       <file leaf-file-name="shooting_ET.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/shooting_ET.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+            <state relative-caret-position="528">
+              <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
               <folding>
                 <element signature="e#15#28#0" expanded="true" />
               </folding>
@@ -62,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game_functions.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="game_functions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/game_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="-3">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="e#15#25#0" expanded="true" />
               </folding>
@@ -91,17 +90,17 @@
       <list>
         <option value="$PROJECT_DIR$/src/index.py" />
         <option value="$PROJECT_DIR$/src/alien_invasion.py" />
-        <option value="$PROJECT_DIR$/src/shooting_ET.py" />
         <option value="$PROJECT_DIR$/src/rocket.py" />
-        <option value="$PROJECT_DIR$/src/game_functions.py" />
         <option value="$PROJECT_DIR$/src/setting.py" />
         <option value="$PROJECT_DIR$/src/bullet.py" />
+        <option value="$PROJECT_DIR$/src/shooting_ET.py" />
+        <option value="$PROJECT_DIR$/src/game_functions.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="595" />
-    <option name="y" value="32" />
+    <option name="x" value="638" />
+    <option name="y" value="30" />
     <option name="width" value="951" />
     <option name="height" value="702" />
   </component>
@@ -197,7 +196,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="595" y="32" width="951" height="702" extended-state="0" />
+    <frame x="638" y="30" width="951" height="702" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972497" sideWeight="0.49423394" order="0" side_tool="false" content_ui="combo" />
@@ -272,30 +271,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/shooting_ET.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding>
-            <element signature="e#15#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game_functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding>
-            <element signature="e#15#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -317,10 +296,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bullet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        <state relative-caret-position="69">
+          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding>
             <element signature="e#15#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shooting_ET.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="e#15#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
