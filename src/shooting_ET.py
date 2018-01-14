@@ -3,6 +3,7 @@ import pygame
 from pygame.sprite import Group
 from setting import Settings
 from rocket import Rocket
+from alien import Alien
 import game_functions as gf
 
 
@@ -15,6 +16,8 @@ def run_game():
 
     # 创建飞船
     rocket = Rocket(ai_settings, screen)
+    # 创建一个外星人
+    alien = Alien(ai_settings, screen)
     # 创建用于存储子弹的编组
     bullets = Group()
 
@@ -23,7 +26,6 @@ def run_game():
         gf.check_events(ai_settings, screen, rocket, bullets)
         rocket.update()
         gf.update_bullets(bullets)
-        gf.update_screen(ai_settings, screen, rocket, bullets)
-
+        gf.update_screen(ai_settings, screen, rocket, alien, bullets)
 
 run_game()

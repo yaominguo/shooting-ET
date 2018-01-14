@@ -12,6 +12,8 @@ def check_keydown_events(event, ai_settings, screen, rocket, bullets):
         rocket.moving_left = True
     elif event.key == pygame.K_SPACE:
         fire_bullet(ai_settings, screen, rocket, bullets)
+    elif event.key == pygame.k_q:
+        sys.exit()
 
 
 def fire_bullet(ai_settings, screen, rocket, bullets):
@@ -41,13 +43,14 @@ def check_events(ai_settings, screen, rocket, bullets):
             check_keyup_events(event, rocket)
 
 
-def update_screen(ai_settings, screen, rocket, bullets):
+def update_screen(ai_settings, screen, rocket, alien, bullets):
     """更新屏幕图像，并切换到新屏幕"""
     screen.fill(ai_settings.bg_color)
     # 在飞船和外星人后面重绘所有子弹
     for bullet in bullets.sprites():
         bullet.draw_bullet()
     rocket.blitme()
+    alien.blitme()
 
     pygame.display.flip()
 
