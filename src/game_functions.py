@@ -34,7 +34,7 @@ def check_keyup_events(event, rocket):
         rocket.moving_left = False
 
 
-def check_events(ai_settings, screen, stats, play_button, rocket, bullets):
+def check_events(ai_settings, screen, stats, play_button, rocket, aliens, bullets):
     """响应按键和鼠标事件"""
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -45,13 +45,30 @@ def check_events(ai_settings, screen, stats, play_button, rocket, bullets):
             check_keyup_events(event, rocket)
         elif event.type == pygame.MOUSEBUTTONDOWN:
             mouse_x, mouse_y = pygame.mouse.get_pos()
-            check_play_button(stats, play_button, mouse_x, mouse_y)
+            check_play_button(ai_settings, screen, stats, play_button, rocket, aliens, bullets, mouse_x, mouse_y)
 
 
-def check_play_button(stats, play_button, mouse_x, mouse_y):
+def check_play_button(ai_settings, screen, stats, play_button, rocket, aliens, bullets, mouse_x, mouse_y):
     """在玩家单机Play按钮时开始新游戏"""
-    if play_button.rect.collidepoint(mouse_x, mouse_y):
+    button_clicked = play_button.rect.collidepoint(mouse_x, mouse_y)
+    if button_clicked and not stats.game_active:
+        # 重置设置
+        ai_settings.initialize_dynamic_settings()
+
+        # 隐藏光标
+        pygame.mouse.set_visible(False)
+
+        # 重置游戏统计信息
+        stats.reset_stats()
         stats.game_active = True
+
+        # 清空外星人列表和子弹列表
+        aliens.empty()
+        bullets.empty()
+
+        # 创建一群新的外星人，并让飞船居中
+        create_fleet(ai_settings, screen, rocket, aliens)
+        rocket.center_rocket()
 
 
 def update_screen(ai_settings, screen, stats, rocket, aliens, bullets, play_button):
@@ -87,8 +104,9 @@ def check_bullet_alien_collisions(ai_settings, screen, rocket, aliens, bullets):
     # 如果是，就删除相应的子弹和敌人
     collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
     if len(aliens) == 0:
-        # 删除现有的子弹并新建一群外星人
+        # 删除现有的子弹, 加快游戏节奏，并新建一群外星人
         bullets.empty()
+        ai_settings.increase_speed()
         create_fleet(ai_settings, screen, rocket, aliens)
 
 
@@ -125,6 +143,7 @@ def rocket_hit(ai_settings, stats, screen, rocket, aliens, bullets):
         sleep(0.5)
     else:
         stats.game_active = False
+        pygame.mouse.set_visible(True)  # 显示光标
 
 
 def check_aliens_bottom(ai_settings, stats, screen, rocket, aliens, bullets):
