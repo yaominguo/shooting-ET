@@ -1,9 +1,10 @@
 # coding=utf-8
 import pygame
 from pygame.sprite import Group
-from setting import Settings
-from rocket import Rocket
+
 import game_functions as gf
+from rocket import Rocket
+from setting import Settings
 from game_stats import GameStats
 
 

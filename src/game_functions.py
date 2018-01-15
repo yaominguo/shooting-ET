@@ -128,7 +128,7 @@ def update_aliens(ai_settings, stats, screen, rocket, aliens, bullets):
     aliens.update()
 
     # 检测外星人和飞船的碰撞
-    if pygame.sprite.spritecollide(rocket, aliens, True, True):
+    if pygame.sprite.spritecollideany(rocket, aliens):
         rocket_hit(ai_settings, stats, screen, rocket, aliens, bullets)
     # 检测外星人到达屏幕底端
     check_aliens_bottom(ai_settings, stats, screen, rocket, aliens, bullets)
