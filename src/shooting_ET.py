@@ -4,6 +4,7 @@ from pygame.sprite import Group
 from setting import Settings
 from rocket import Rocket
 import game_functions as gf
+from game_stats import GameStats
 
 
 def run_game():
@@ -13,6 +14,8 @@ def run_game():
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Shooting ET!")
 
+    # 创建一个用于存储游戏统计信息的实例
+    stats = GameStats(ai_settings)
     # 创建飞船
     rocket = Rocket(ai_settings, screen)
     # 创建用于存储外星人的编组
@@ -26,9 +29,10 @@ def run_game():
     # 开始游戏的主循环
     while True:
         gf.check_events(ai_settings, screen, rocket, bullets)
-        rocket.update()
-        gf.update_bullets(aliens, bullets)
-        gf.update_aliens(ai_settings, aliens)
+        if stats.game_active:
+            rocket.update()
+            gf.update_bullets(ai_settings, screen, rocket, aliens, bullets)
+            gf.update_aliens(ai_settings, stats, screen, rocket, aliens, bullets)
         gf.update_screen(ai_settings, screen, rocket, aliens, bullets)
 
 
