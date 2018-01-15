@@ -71,7 +71,7 @@ def check_play_button(ai_settings, screen, stats, play_button, rocket, aliens, b
         rocket.center_rocket()
 
 
-def update_screen(ai_settings, screen, stats, rocket, aliens, bullets, play_button):
+def update_screen(ai_settings, screen, stats, sb, rocket, aliens, bullets, play_button):
     """更新屏幕图像，并切换到新屏幕"""
     screen.fill(ai_settings.bg_color)
 
@@ -81,33 +81,49 @@ def update_screen(ai_settings, screen, stats, rocket, aliens, bullets, play_butt
     rocket.blitme()
     aliens.draw(screen)
 
+    # 显示得分
+    sb.show_score()
+
     # 如果游戏处于非活动状态，就绘制Play按钮
     if not stats.game_active:
         play_button.draw_button()
 
-    # 让最近绘制的屏幕课件
+    # 让最近绘制的屏幕可见
     pygame.display.flip()
 
 
-def update_bullets(ai_settings, screen, rocket, aliens, bullets):
+def update_bullets(ai_settings, screen, stats, sb, rocket, aliens, bullets):
     """更新子弹的位置，并删除已超出屏幕的子弹"""
     bullets.update()
     for bullet in bullets.copy():
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)
-    check_bullet_alien_collisions(ai_settings, screen, rocket, aliens, bullets)
+    check_bullet_alien_collisions(ai_settings, screen, stats, sb, rocket, aliens, bullets)
 
 
-def check_bullet_alien_collisions(ai_settings, screen, rocket, aliens, bullets):
+def check_bullet_alien_collisions(ai_settings, screen, stats, sb, rocket, aliens, bullets):
     """响应子弹和外星人的碰撞"""
     # 检查是否有子弹击中了敌人
     # 如果是，就删除相应的子弹和敌人
     collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
+    if collisions:
+        for aliens in collisions.values():
+            stats.score += ai_settings.alien_points * len(aliens)
+            sb.prep_score()
+        check_high_score(stats, sb)
+
     if len(aliens) == 0:
         # 删除现有的子弹, 加快游戏节奏，并新建一群外星人
         bullets.empty()
         ai_settings.increase_speed()
         create_fleet(ai_settings, screen, rocket, aliens)
+
+
+def check_high_score(stats, sb):
+    """检查是否诞生了新的最高分"""
+    if stats.score > stats.high_score:
+        stats.high_score = stats.score
+        sb.prep_high_score()
 
 
 def check_fleet_edges(ai_settings, aliens):
