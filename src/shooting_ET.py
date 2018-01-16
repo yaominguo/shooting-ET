@@ -35,7 +35,7 @@ def run_game():
 
     # 开始游戏的主循环
     while True:
-        gf.check_events(ai_settings, screen, stats, play_button, rocket, aliens, bullets)
+        gf.check_events(ai_settings, screen, stats, sb, play_button, rocket, aliens, bullets)
         if stats.game_active:
             rocket.update()
             gf.update_bullets(ai_settings, screen, stats, sb, rocket, aliens, bullets)
