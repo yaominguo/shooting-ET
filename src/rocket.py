@@ -1,10 +1,11 @@
 # coding=utf-8
 import pygame
+from pygame.sprite import Sprite
 
-
-class Rocket():
+class Rocket(Sprite):
     def __init__(self, ai_settings, screen):
         """初始化飞船并设置初始位置"""
+        super(Rocket, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
         # 加载飞船并获取外形矩阵

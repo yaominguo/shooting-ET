@@ -27,9 +27,9 @@ class Settings():
 
     def initialize_dynamic_settings(self):
         """初始化随游戏进行而变化的设置"""
-        self.speed_factor = 1.5
-        self.bullet_speed_factor = 3
-        self.alien_speed_factor = 1
+        self.speed_factor = 5
+        self.bullet_speed_factor = 10
+        self.alien_speed_factor = 5
 
         # fleet_direction 为1表示右移，-1表示左移
         self.fleet_direction = 1

@@ -1,5 +1,7 @@
 # coding=utf-8
 import pygame.font
+from pygame.sprite import Group
+from rocket import Rocket
 
 
 class Scoreboard():
@@ -20,6 +22,7 @@ class Scoreboard():
         self.prep_score()
         self.prep_high_score()
         self.prep_level()
+        self.prep_rockets()
 
     def prep_score(self):
         """将得分转换为一幅渲染的图像"""
@@ -51,8 +54,19 @@ class Scoreboard():
         self.level_rect.right = self.score_rect.right
         self.level_rect.top = self.score_rect.bottom + 10
 
+    def prep_rockets(self):
+        """显示还剩下多少艘飞船"""
+        self.rockets = Group()
+        for rocket_number in range(self.stats.rocket_left):
+            rocket = Rocket(self.ai_settings, self.screen)
+            rocket.rect.x = 10 + rocket_number * rocket.rect.width
+            rocket.rect.y = 10
+            self.rockets.add(rocket)
+
     def show_score(self):
         """在屏幕上显示当前得分和最高得分"""
         self.screen.blit(self.score_image, self.score_rect)
         self.screen.blit(self.high_score_image, self.high_score_rect)
         self.screen.blit(self.level_image, self.level_rect)
+        # 绘制飞船
+        self.rockets.draw(self.screen)
