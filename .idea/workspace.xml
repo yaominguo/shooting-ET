@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93e4e77c-77b0-420b-ad1e-4bb614b08696" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game_functions.py" afterPath="$PROJECT_DIR$/src/game_functions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rocket.py" afterPath="$PROJECT_DIR$/src/rocket.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scoreboard.py" afterPath="$PROJECT_DIR$/src/scoreboard.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/setting.py" afterPath="$PROJECT_DIR$/src/setting.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/shooting_ET.py" afterPath="$PROJECT_DIR$/src/shooting_ET.py" />
-    </list>
+    <list default="true" id="93e4e77c-77b0-420b-ad1e-4bb614b08696" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,8 +95,8 @@
       <file leaf-file-name="game_functions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/game_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="118" column="35" lean-forward="true" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
+            <state relative-caret-position="2784">
+              <caret line="116" column="65" lean-forward="true" selection-start-line="116" selection-start-column="65" selection-end-line="116" selection-end-column="65" />
               <folding>
                 <element signature="e#15#25#0" expanded="true" />
               </folding>
@@ -170,8 +164,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="464" />
-    <option name="y" value="54" />
+    <option name="x" value="337" />
+    <option name="y" value="80" />
     <option name="width" value="951" />
     <option name="height" value="702" />
   </component>
@@ -268,7 +262,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="464" y="54" width="951" height="702" extended-state="0" />
+    <frame x="337" y="80" width="951" height="702" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972497" sideWeight="0.49423394" order="0" side_tool="false" content_ui="combo" />
@@ -599,8 +593,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="118" column="35" lean-forward="true" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
+        <state relative-caret-position="2784">
+          <caret line="116" column="65" lean-forward="true" selection-start-line="116" selection-start-column="65" selection-end-line="116" selection-end-column="65" />
           <folding>
             <element signature="e#15#25#0" expanded="true" />
           </folding>
